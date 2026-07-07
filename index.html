@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda do Evento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Cores por tipo de evento */
+        .abertura { border-left: 10px solid #0077cc; }
+        .painel { border-left: 10px solid #009933; }
+        .intervalo { border-left: 10px solid #ff9900; }
+        .brindes { border-left: 10px solid #cc0066; }
+        .encerramento { border-left: 10px solid #6600cc; }
+
+        .btn-form {
+            display: block;
+            width: 250px;
+            margin: 40px auto;
+            padding: 15px;
+            background: #003366;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .btn-form:hover {
+            background: #0055aa;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Substitua o link abaixo pela URL da sua logo -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo do Evento">
+    <h1>Agenda do Evento</h1>
+</header>
+
+<div class="intro">
+    <p><strong>Vamos juntos!</strong> Prepare-se para um dia de muito conteúdo, aprendizado e integração.</p>
+</div>
+
+<div class="container">
+
+    <!-- Abertura -->
+    <div class="card abertura">
+        <h2>Abertura</h2>
+        <p><strong>Horário:</strong> 08:30 às 09:00</p>
+        <p><strong>Local:</strong> Brasília e São Paulo</p>
+    </div>
+
+    <!-- Painel 1 -->
+    <div class="card painel">
+        <h2>Painel 1 — Testando primeiro caso</h2>
+        <p><strong>Horário:</strong> 09:00 às 09:50</p>
+        <p><strong>Local:</strong> Brasília</p>
+        <p><strong>Participantes:</strong> Mario</p>
+    </div>
+
+    <!-- Intervalo -->
+    <div class="card intervalo">
+        <h2>Intervalo</h2>
+        <p><strong>Horário:</strong> 09:50 às 10:00</p>
+    </div>
+
+    <!-- Painel 2 -->
+    <div class="card painel">
+        <h2>Painel 2 — Segundo caso expositivo</h2>
+        <p><strong>Horário:</strong> 10:00 às 10:50</p>
+        <p><strong>Local:</strong> São Paulo</p>
+        <p><strong>Participantes:</strong> Jorge e Luciano</p>
+    </div>
+
+    <!-- Brindes -->
+    <div class="card brindes">
+        <h2>Sorteio de Brindes</h2>
+        <p><strong>Horário:</strong> 10:50 às 11:20</p>
+        <p><strong>Local:</strong> Brasília e São Paulo</p>
+    </div>
+
+    <!-- Painel 3 -->
+    <div class="card painel">
+        <h2>Painel 3 — Caso 3 discussão</h2>
+        <p><strong>Horário:</strong> 11:20 às 12:10</p>
+        <p><strong>Local:</strong> Brasília</p>
+        <p><strong>Participantes:</strong> André e Gabriel</p>
+    </div>
+
+    <!-- Intervalo almoço -->
+    <div class="card intervalo">
+        <h2>Intervalo — Almoço</h2>
+        <p><strong>Horário:</strong> 12:10 às 13:40</p>
+        <p><strong>Local:</strong> Brasília e São Paulo</p>
+    </div>
+
+    <!-- Painel 4 -->
+    <div class="card painel">
+        <h2>Painel 4 — Quarto caso de análise</h2>
+        <p><strong>Horário:</strong> 13:40 às 15:00</p>
+        <p><strong>Local:</strong> Brasília</p>
+        <p><strong>Participantes:</strong> Matheus e Pedro</p>
+    </div>
+
+    <!-- Encerramento -->
+    <div class="card encerramento">
+        <h2>Encerramento</h2>
+        <p><strong>Horário:</strong> 15:00 às 16:00</p>
+        <p><strong>Local:</strong> Brasília e São Paulo</p>
+    </div>
+
+</div>
+
+<!-- Botão para formulário -->
+<a class="btn-form" href="https://forms.gle/SEU_LINK_AQUI" target="_blank">
+    Confirmar Participação
+</a>
+
+</body>
+</html>
