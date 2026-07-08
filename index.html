@@ -2,158 +2,224 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Agenda do Evento</title>
+    <title>Evento BB</title>
+
+    <!-- Fonte profissional -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS (carrossel) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
+            background: #f2f2f2;
+            color: #333;
         }
 
         header {
-            background: #003366;
+            background: #0033a0; /* Azul BB */
             color: white;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
         }
 
         header img {
-            max-height: 80px;
+            max-height: 90px;
             margin-bottom: 10px;
         }
 
         .intro {
             text-align: center;
-            padding: 20px;
-            font-size: 20px;
+            padding: 25px;
+            font-size: 22px;
+            background: #ffcc00; /* Amarelo BB */
+            color: #0033a0;
+            font-weight: 700;
         }
 
-        .container {
+        h2.section-title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 28px;
+            color: #0033a0;
+        }
+
+        /* Carrossel */
+        .swiper {
             width: 90%;
             max-width: 900px;
-            margin: auto;
+            margin: 40px auto;
+            padding-bottom: 40px;
         }
 
-        .card {
+        .swiper-slide {
             background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            color: #333;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
         }
 
-        /* Cores por tipo de evento */
-        .abertura { border-left: 10px solid #0077cc; }
-        .painel { border-left: 10px solid #009933; }
-        .intervalo { border-left: 10px solid #ff9900; }
-        .brindes { border-left: 10px solid #cc0066; }
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            margin: 6px 0;
+            font-size: 16px;
+        }
+
+        /* Cores por tipo */
+        .abertura { border-left: 10px solid #0033a0; }
+        .painel { border-left: 10px solid #007bff; }
+        .intervalo { border-left: 10px solid #ffcc00; }
+        .brindes { border-left: 10px solid #ff6600; }
         .encerramento { border-left: 10px solid #6600cc; }
 
+        /* Botão */
         .btn-form {
             display: block;
-            width: 250px;
-            margin: 40px auto;
-            padding: 15px;
-            background: #003366;
+            width: 300px;
+            margin: 50px auto;
+            padding: 18px;
+            background: #0033a0;
             color: white;
             text-align: center;
-            border-radius: 8px;
-            font-size: 18px;
+            border-radius: 10px;
+            font-size: 20px;
             text-decoration: none;
+            font-weight: 700;
         }
 
         .btn-form:hover {
-            background: #0055aa;
+            background: #002266;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <!-- Substitua o link abaixo pela URL da sua logo -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo do Evento">
-    <h1>Agenda do Evento</h1>
+    <!-- Troque pela sua logo -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Banco_do_Brasil_logo.svg" alt="Logo BB">
+    <h1>Evento Banco do Brasil</h1>
 </header>
 
 <div class="intro">
-    <p><strong>Vamos juntos!</strong> Prepare-se para um dia de muito conteúdo, aprendizado e integração.</p>
+    Vamos juntos! Prepare-se para um dia de muito conteúdo, aprendizado e integração.
 </div>
 
-<div class="container">
+<h2 class="section-title">Programação</h2>
 
-    <!-- Abertura -->
-    <div class="card abertura">
-        <h2>Abertura</h2>
-        <p><strong>Horário:</strong> 08:30 às 09:00</p>
-        <p><strong>Local:</strong> Brasília e São Paulo</p>
+<!-- Carrossel -->
+<div class="swiper">
+    <div class="swiper-wrapper">
+
+        <!-- Abertura -->
+        <div class="swiper-slide abertura">
+            <div class="card-title">Abertura</div>
+            <div class="info"><strong>Horário:</strong> 08:30 às 09:00</div>
+            <div class="info"><strong>Local:</strong> Brasília e São Paulo</div>
+        </div>
+
+        <!-- Painel 1 -->
+        <div class="swiper-slide painel">
+            <div class="card-title">Painel 1 — Testando primeiro caso</div>
+            <div class="info"><strong>Horário:</strong> 09:00 às 09:50</div>
+            <div class="info"><strong>Local:</strong> Brasília</div>
+            <div class="info"><strong>Participantes:</strong> Mario</div>
+        </div>
+
+        <!-- Intervalo -->
+        <div class="swiper-slide intervalo">
+            <div class="card-title">Intervalo</div>
+            <div class="info"><strong>Horário:</strong> 09:50 às 10:00</div>
+        </div>
+
+        <!-- Painel 2 -->
+        <div class="swiper-slide painel">
+            <div class="card-title">Painel 2 — Segundo caso expositivo</div>
+            <div class="info"><strong>Horário:</strong> 10:00 às 10:50</div>
+            <div class="info"><strong>Local:</strong> São Paulo</div>
+            <div class="info"><strong>Participantes:</strong> Jorge e Luciano</div>
+        </div>
+
+        <!-- Brindes -->
+        <div class="swiper-slide brindes">
+            <div class="card-title">Sorteio de Brindes</div>
+            <div class="info"><strong>Horário:</strong> 10:50 às 11:20</div>
+            <div class="info"><strong>Local:</strong> Brasília e São Paulo</div>
+        </div>
+
+        <!-- Painel 3 -->
+        <div class="swiper-slide painel">
+            <div class="card-title">Painel 3 — Caso 3 discussão</div>
+            <div class="info"><strong>Horário:</strong> 11:20 às 12:10</div>
+            <div class="info"><strong>Local:</strong> Brasília</div>
+            <div class="info"><strong>Participantes:</strong> André e Gabriel</div>
+        </div>
+
+        <!-- Intervalo almoço -->
+        <div class="swiper-slide intervalo">
+            <div class="card-title">Intervalo — Almoço</div>
+            <div class="info"><strong>Horário:</strong> 12:10 às 13:40</div>
+            <div class="info"><strong>Local:</strong> Brasília e São Paulo</div>
+        </div>
+
+        <!-- Painel 4 -->
+        <div class="swiper-slide painel">
+            <div class="card-title">Painel 4 — Quarto caso de análise</div>
+            <div class="info"><strong>Horário:</strong> 13:40 às 15:00</div>
+            <div class="info"><strong>Local:</strong> Brasília</div>
+            <div class="info"><strong>Participantes:</strong> Matheus e Pedro</div>
+        </div>
+
+        <!-- Encerramento -->
+        <div class="swiper-slide encerramento">
+            <div class="card-title">Encerramento</div>
+            <div class="info"><strong>Horário:</strong> 15:00 às 16:00</div>
+            <div class="info"><strong>Local:</strong> Brasília e São Paulo</div>
+        </div>
+
     </div>
 
-    <!-- Painel 1 -->
-    <div class="card painel">
-        <h2>Painel 1 — Testando primeiro caso</h2>
-        <p><strong>Horário:</strong> 09:00 às 09:50</p>
-        <p><strong>Local:</strong> Brasília</p>
-        <p><strong>Participantes:</strong> Mario</p>
-    </div>
+    <!-- Paginação -->
+    <div class="swiper-pagination"></div>
 
-    <!-- Intervalo -->
-    <div class="card intervalo">
-        <h2>Intervalo</h2>
-        <p><strong>Horário:</strong> 09:50 às 10:00</p>
-    </div>
-
-    <!-- Painel 2 -->
-    <div class="card painel">
-        <h2>Painel 2 — Segundo caso expositivo</h2>
-        <p><strong>Horário:</strong> 10:00 às 10:50</p>
-        <p><strong>Local:</strong> São Paulo</p>
-        <p><strong>Participantes:</strong> Jorge e Luciano</p>
-    </div>
-
-    <!-- Brindes -->
-    <div class="card brindes">
-        <h2>Sorteio de Brindes</h2>
-        <p><strong>Horário:</strong> 10:50 às 11:20</p>
-        <p><strong>Local:</strong> Brasília e São Paulo</p>
-    </div>
-
-    <!-- Painel 3 -->
-    <div class="card painel">
-        <h2>Painel 3 — Caso 3 discussão</h2>
-        <p><strong>Horário:</strong> 11:20 às 12:10</p>
-        <p><strong>Local:</strong> Brasília</p>
-        <p><strong>Participantes:</strong> André e Gabriel</p>
-    </div>
-
-    <!-- Intervalo almoço -->
-    <div class="card intervalo">
-        <h2>Intervalo — Almoço</h2>
-        <p><strong>Horário:</strong> 12:10 às 13:40</p>
-        <p><strong>Local:</strong> Brasília e São Paulo</p>
-    </div>
-
-    <!-- Painel 4 -->
-    <div class="card painel">
-        <h2>Painel 4 — Quarto caso de análise</h2>
-        <p><strong>Horário:</strong> 13:40 às 15:00</p>
-        <p><strong>Local:</strong> Brasília</p>
-        <p><strong>Participantes:</strong> Matheus e Pedro</p>
-    </div>
-
-    <!-- Encerramento -->
-    <div class="card encerramento">
-        <h2>Encerramento</h2>
-        <p><strong>Horário:</strong> 15:00 às 16:00</p>
-        <p><strong>Local:</strong> Brasília e São Paulo</p>
-    </div>
-
+    <!-- Botões -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 </div>
 
 <!-- Botão para formulário -->
-<a class="btn-form" href="https://docs.google.com/forms/d/e/1FAIpQLSf5gsvDMj-xXutrh_rArBs5otdJBCej2UcXKzMxR29UnKy9tg/viewform?usp=publish-editor" target="_blank">
+<a class="btn-form" href="https://docs.google.com/forms/d/e/1FAIpQLSf5gsvDMj-xXutrh_rArBs5otdJBCej2UcXKzMxR29UnKy9tg/viewform?usp=header" target="_blank">
     Confirmar Participação
 </a>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+</script>
 
 </body>
 </html>
