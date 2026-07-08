@@ -113,11 +113,20 @@
             background-image: none;
         }
 
+        /* Setas fora dos cards, nas extremidades */
         .carousel-control-prev,
         .carousel-control-next {
-            width: 80px;
+            width: 5%; /* deixa espaço lateral */
         }
 
+        .carousel-control-prev {
+            left: -60px; /* move para fora do container */
+        }
+
+        .carousel-control-next {
+            right: -60px; /* move para fora do container */
+        }
+        
         .arrow-btn {
             background: #ffcc00; /* Amarelo BB */
             border-radius: 50%;
@@ -128,7 +137,7 @@
             justify-content: center;
             box-shadow: 0 3px 8px rgba(0,0,0,0.25);
             transition: 0.3s;
-            animation: pulse 1.8s infinite ease-in-out;
+            /* animation: pulse 1.8s infinite ease-in-out; */
         }
 
         .arrow-btn:hover {
@@ -143,10 +152,15 @@
         }
 
         /* Animação de pulso */
-        @keyframes pulse {
+        /*@keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.08); }
             100% { transform: scale(1); }
+        } */
+
+        /* Remove autoplay */
+        .carousel {
+            animation: none !important;
         }
 
     </style>
@@ -166,14 +180,14 @@
 <h2 class="section-title">Programação</h2>
 
 <!-- Carrossel Bootstrap -->
-<div id="carouselEventos" class="carousel slide container" data-bs-ride="carousel">
+<div id="carouselEventos" class="carousel slide container" data-bs-ride="false">
     <div class="carousel-inner">
 
         <!-- Slide 1 -->
         <div class="carousel-item active">
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="event-card abertura">
                         <h3>Abertura</h3>
                         <p><strong>Horário:</strong> 08:30 às 09:00</p>
@@ -181,7 +195,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="event-card painel">
                         <h3>Painel 1 — Testando primeiro caso</h3>
                         <p><strong>Horário:</strong> 09:00 às 09:50</p>
@@ -190,7 +204,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="event-card intervalo">
                         <h3>Intervalo</h3>
                         <p><strong>Horário:</strong> 09:50 às 10:00</p>
@@ -202,9 +216,9 @@
 
         <!-- Slide 2 -->
         <div class="carousel-item">
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="event-card painel">
                         <h3>Painel 2 — Segundo caso expositivo</h3>
                         <p><strong>Horário:</strong> 10:00 às 10:50</p>
@@ -213,7 +227,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="event-card brindes">
                         <h3>Sorteio de Brindes</h3>
                         <p><strong>Horário:</strong> 10:50 às 11:20</p>
@@ -221,7 +235,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="event-card painel">
                         <h3>Painel 3 — Caso 3 discussão</h3>
                         <p><strong>Horário:</strong> 11:20 às 12:10</p>
@@ -235,9 +249,9 @@
 
         <!-- Slide 3 -->
         <div class="carousel-item">
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="event-card intervalo">
                         <h3>Intervalo — Almoço</h3>
                         <p><strong>Horário:</strong> 12:10 às 13:40</p>
@@ -245,7 +259,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="event-card painel">
                         <h3>Painel 4 — Quarto caso de análise</h3>
                         <p><strong>Horário:</strong> 13:40 às 15:00</p>
@@ -254,7 +268,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="event-card encerramento">
                         <h3>Encerramento</h3>
                         <p><strong>Horário:</strong> 15:00 às 16:00</p>
@@ -267,7 +281,7 @@
 
     </div>
 
-    <!-- Setas personalizadas -->
+    <!-- Setas nas extremidades -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselEventos" data-bs-slide="prev">
         <div class="arrow-btn">
             <i class="bi bi-arrow-left"></i>
@@ -280,7 +294,6 @@
         </div>
     </button>
 </div>
-
 
 <!-- Botão para formulário -->
 <a class="btn-form" href="https://docs.google.com/forms/d/e/1FAIpQLSf5gsvDMj-xXutrh_rArBs5otdJBCej2UcXKzMxR29UnKy9tg/viewform?usp=header" target="_blank">
